@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>kalkulator</title>
+    <link rel="stylesheet" href="./grid1.css" type="text/css">
+  </head>
+  <body class="background">
+    <h1>Menambahkan 2 angka</h1>
+    <!-- <img class="background" src="" alt=""> -->
+    <div class="calc">
+      <input type="text" size="5" placeholder="0" />
+       +
+      <input type="text" size="5" placeholder="0" />
+      <button> = </button>
+      <input type="text" size="5" readonly />
+    </div>
+    <script>
+      function calc() {
+       let angka = document.querySelectorAll('input');
+       let i1= angka[0].value ; //angka pertama
+       let i2= angka[1].value ; //angka kedua
+      angka[2].value= parseInt(i1) + parseInt(i2) ;
+    }
+      let tombol = document.querySelector('button');
+      tombol.addEventListener('click', calc);
+    </script>
+  </body>
+</html>
